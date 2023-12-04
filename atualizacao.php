@@ -1,4 +1,9 @@
-<?php include_once "partials/header.php";?>
+<?php 
+    include_once "partials/header.php";
+    include_once "./app/DAO.php";
+    $id = $_GET["id"];
+    $dao = new DAO();
+?>
 <body>
     <nav class="navbar navbar-light bg-light menu">
         <a class="navbar-brand" href="cadastro.php">CRUD PHP POO</a>
@@ -7,9 +12,7 @@
     <div class="container col-6">
         <h3>Cadastro de Alunos</h3>
         <?php
-            include_once "./app/DAO.php";
-            $id = $_GET["id"];
-            $dao = new DAO();
+ 
             $lista = $dao->buscaPorId($id);
         ?>
         <form action="app/controller.php" method="post" onsubmit="return confirmaatu()">

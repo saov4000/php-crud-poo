@@ -1,4 +1,9 @@
-<?php include_once "partials/header.php";?>
+<?php 
+    include_once "partials/header.php";
+    include_once "./app/DAO.php";
+    $dao = new DAO();
+    $lista = $dao->listar();
+?>
 <body>
     <nav class="navbar navbar-light bg-light menu">
         <a class="navbar-brand">CRUD PHP POO</a>
@@ -10,15 +15,16 @@
         <br>
         <table class="table table-bordered table-hover table-light">
             <thead>     
-                <tr><th>Id</th><th>Nome</th><th>Sexo</th><th>Cidade</th><th>Ações</th></tr>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Sexo</th>
+                    <th>Cidade</th>
+                    <th>Ações</th>
+                </tr>
             </thead>
             <tbody>
-                <?php 
-                    include_once "./app/DAO.php";
-                    $dao = new DAO();
-                    $lista = $dao->listar();
-                    foreach($lista as $row): 
-                ?>
+                <?php foreach($lista as $row): ?>
                 <tr>
                     <td><?= $row['id'] ?></td>
                     <td><?= $row['nome'] ?></td>
