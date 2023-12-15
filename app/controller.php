@@ -1,5 +1,4 @@
 <?php
-
     include_once "DAO.php";
     include_once "Aluno.php";
 
@@ -33,6 +32,5 @@
             $mensagem =  "alert('Falha ao excluir')";
         }     
     }
-
     echo "<script>".$mensagem."; document.location='../index.php'</script>";
 ?>
