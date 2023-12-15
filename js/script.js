@@ -31,8 +31,6 @@ function confirmaatu(){
 
 function confirmadel(v){
     if(confirm("Tem certeza que deseja excluir?")){
-        document.location = './app/controller.php?id='+v+'&opcao=3'
-    }else{
-
+        document.location = './app/controller.php?id='+v+'&opcao=3';
     }
 }

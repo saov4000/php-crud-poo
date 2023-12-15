@@ -11,10 +11,7 @@
     <br>
     <div class="container col-6">
         <h3>Cadastro de Alunos</h3>
-        <?php
- 
-            $lista = $dao->buscaPorId($id);
-        ?>
+        <?php $lista = $dao->buscarPorId($id);?>
         <form action="app/controller.php" method="post" onsubmit="return confirmaatu()">
             <label for="">Id</label>
             <input type="text" name="id" class="form-control" value="<?= $lista["id"]?>">

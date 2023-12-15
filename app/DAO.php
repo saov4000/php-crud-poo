@@ -1,5 +1,4 @@
 <?php
-
 include_once "Conexao.php";
 include_once "Aluno.php";
 
@@ -31,7 +30,7 @@ class DAO{
         }
     }
 
-    public function buscaPorId($id){
+    public function buscarPorId($id){
         try{
             $sql = "SELECT * FROM aluno WHERE id=:id";
             $stmt = Conexao::getConexao()->prepare($sql);
